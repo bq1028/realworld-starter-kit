@@ -1,0 +1,22 @@
+{
+  "name": "follower",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "followed_Id": {
+      "type": "string",
+      "required": true
+    },
+    "follower_Id": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

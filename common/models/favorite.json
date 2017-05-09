@@ -6,11 +6,11 @@
     "validateUpsert": true
   },
   "properties": {
-    "article_Id": {
+    "articleId": {
       "type": "string",
       "required": true
     },
-    "user_Id": {
+    "userId": {
       "type": "string",
       "required": true
     }

@@ -6,11 +6,19 @@
     "validateUpsert": true
   },
   "properties": {
+    "slug": {
+      "type": "string",
+      "required": false
+    },
     "title": {
       "type": "string",
       "required": true
     },
-    "content": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
       "type": "string",
       "required": true
     },
@@ -18,8 +26,16 @@
       "type": "string",
       "required": true
     },
-    "created_At": {
+    "createdAt": {
       "type": "date",
+      "required": false
+    },
+    "updatedAt": {
+      "type": "date",
+      "required": false
+    },
+    "authorId": {
+      "type": "number",
       "required": true
     }
   },

@@ -9,6 +9,7 @@
     "mixins": [
       "loopback/common/mixins",
       "loopback/server/mixins",
+      "../node_modules/loopback-cascade-delete-mixin",
       "../common/mixins",
       "./mixins"
     ]
@@ -37,23 +38,33 @@
     "public": false
   },
   "user": {
-    "dataSource": "db",
-    "public": true
+    "dataSource": "LocalPostgreSQL",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "article": {
-    "dataSource": "db",
-    "public": true
+    "dataSource": "LocalPostgreSQL",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "comment": {
-    "dataSource": "db",
-    "public": true
+    "dataSource": "LocalPostgreSQL",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "favorite": {
-    "dataSource": "db",
-    "public": true
+    "dataSource": "LocalPostgreSQL",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   },
   "follower": {
-    "dataSource": "db",
-    "public": true
+    "dataSource": "LocalPostgreSQL",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
   }
 }

@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "LocalPostgreSQL": {
+    "host": "localhost",
+    "port": 5432,
+    "url": "",
+    "database": "realworldDb",
+    "password": "password",
+    "name": "realworldDb",
+    "user": "postgres",
+    "connector": "postgresql"
   }
 }

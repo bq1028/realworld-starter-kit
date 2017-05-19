@@ -17,6 +17,7 @@
 coverage
 node_modules
 npm-debug.log
-
+dist
+.nyc_output
 
 server/datasources.json

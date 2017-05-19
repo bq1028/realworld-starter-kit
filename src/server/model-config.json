@@ -26,14 +26,11 @@
     "dataSource": "db",
     "public": false
   },
-  "RoleMapping": {
-    "dataSource": "db",
-    "public": false,
-    "options": {
-      "strictObjectIDCoercion": true
-    }
-  },
   "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
     "dataSource": "db",
     "public": false
   },
@@ -62,6 +59,12 @@
     "$resolved": true
   },
   "follower": {
+    "dataSource": "LocalPostgreSQL",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "profile": {
     "dataSource": "LocalPostgreSQL",
     "public": true,
     "$promise": {},

@@ -1,31 +1,68 @@
 {
   "name": "realworld-starter-kit",
   "version": "1.0.0",
-  "main": "server/server.js",
-  "engines": {
-    "node": ">=4"
+  "main": "src/server/server.js",
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
   },
   "scripts": {
-    "lint": "eslint .",
-    "start": "node .",
+    "build": "babel src -s -D -d dist --ignore node_modules",
+    "test": "./node_modules/.bin/nyc ./node_modules/.bin/cross-env NODE_ENV=test ./node_modules/babel-cli/bin/babel-node.js ./node_modules/mocha/bin/_mocha --recursive -R spec tests/*",
+    "lint": "./node_modules/.bin/eslint . --quiet",
+    "start": "nodemon --exec ./node_modules/babel-cli/bin/babel-node.js .",
+    "test:report": "npm run lint && ./node_modules/.bin/nyc --reporter=lcov ./node_modules/.bin/cross-env NODE_ENV=test babel-node ./node_modules/mocha/bin/_mocha --recursive -R spec tests/* --report",
+    "test:coverage:mac": "npm run test:report && open ./coverage/lcov-report/index.html",
+    "test:coverage:linux": "npm run test:report && xdg-open ./coverage/lcov-report/index.html",
+    "test:clean": "rimraf ./coverage",
+    "pretest": "npm run test:clean",
     "posttest": "npm run lint && nsp check"
   },
   "dependencies": {
     "compression": "^1.0.3",
     "cors": "^2.5.2",
+    "cross-env": "^4.0.0",
     "helmet": "^1.3.0",
     "loopback": "^3.0.0",
     "loopback-boot": "^2.6.5",
     "loopback-cascade-delete-mixin": "^1.0.1",
     "loopback-component-explorer": "^4.0.0",
     "loopback-connector-postgresql": "^3.0.0",
+    "loopback-connector-remote": "^3.1.1",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
+"babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.9.0",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-istanbul": "^4.1.3",
+    "babel-plugin-module-resolver": "^2.7.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-latest": "^6.24.1",
+    "coveralls": "^2.11.2",
     "eslint": "^3.17.1",
+    "eslint-config-airbnb": "^14.1.0",
     "eslint-config-loopback": "^8.0.0",
-    "nsp": "^2.1.0"
+    "eslint-config-prettier": "^2.0.0",
+    "eslint-import-resolver-babel-module": "^3.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-prettier": "^2.0.1",
+    "expect": "^1.20.2",
+    "istanbul": "^0.4.0",
+    "mocha": "^3.3.0",
+    "mocha-lcov-reporter": "^1.0.0",
+    "nodemon": "^1.11.0",
+    "nsp": "^2.1.0",
+    "nyc": "^10.3.2",
+    "prettier": "^1.3.1",
+    "prettier-eslint": "^6.2.0",
+    "prettier-eslint-cli": "^3.4.3",
+    "supertest": "^3.0.0"
   },
   "repository": {
     "type": "",

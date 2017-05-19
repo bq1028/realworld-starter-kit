@@ -6,10 +6,9 @@
   "LocalPostgreSQL": {
     "host": "localhost",
     "port": 5432,
-    "url": "",
     "database": "realworldDb",
-    "password": "password",
-    "name": "realworldDb",
+    "password": "Abcd1234",
+    "name": "LocalPostgreSQL",
     "user": "postgres",
     "connector": "postgresql"
   }

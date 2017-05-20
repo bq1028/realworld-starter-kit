@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/paulcedrick/realworld-starter-kit.png?label=ready&title=Ready)](https://waffle.io/paulcedrick/realworld-starter-kit?utm_source=badge)
 # ![RealWorld Example App](logo-loopback.png)
 
 > ### Loopback codebase containing real world examples (CRUD, auth, advanced patterns, etc) that adheres to the [RealWorld](https://github.com/gothinkster/realworld-example-apps) spec and API.

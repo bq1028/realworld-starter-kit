@@ -5,6 +5,10 @@ const boot = require('loopback-boot');
 const exportApp = () => (module.exports = loopback());
 
 const app = exportApp();
+const auth = require('loopback-jwt')(app, {
+  secretKey: 'just testing',
+  model: 'user',
+});
 
 app.start = () =>
   // start the web server

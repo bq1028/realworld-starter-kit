@@ -1,3 +1,4 @@
+/* eslint no-unused-vars: 0 */
 /* eslint no-console: 0 func-names: 0 */
 const loopback = require('loopback');
 const boot = require('loopback-boot');

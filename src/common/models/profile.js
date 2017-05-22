@@ -1,5 +1,2 @@
-'use strict';
-
-module.exports = function(Profile) {
-
-};
+/* eslint no-unused-vars: 0 */
+module.exports = (Profile) => {};

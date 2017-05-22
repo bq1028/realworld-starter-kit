@@ -1,5 +1,2 @@
-'use strict';
-
-module.exports = function(Follower) {
-
-};
+/* eslint no-unused-vars: 0 */
+module.exports = (Follower) => {};
